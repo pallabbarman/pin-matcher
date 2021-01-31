@@ -24,6 +24,11 @@ buttonContainer.addEventListener('click', function (event) {
             const typedInput = document.getElementById('typed-pin');
             typedInput.value = '';
         }
+        if (digit === 'B') {
+            const typedInput = document.getElementById('typed-pin').value;
+            const sliceValue = typedInput.slice(0, -1);
+            document.getElementById('typed-pin').value = sliceValue;
+        }
     }
     else {
         const typedInput = document.getElementById('typed-pin');
